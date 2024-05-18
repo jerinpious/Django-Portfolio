@@ -4,7 +4,30 @@
 {% block title %}
 Homepage
 {% endblock title %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}"> 
+{% endblock extrahead%}
 
 {% block content %}
-<p>This is the homepage</p>
+    <div class="filters">
+        <input type="text" id="name-search" placeholder="Search by name ....">
+        <div class="tags-list"> <!-- so here we are using the jinja templating we are doing a basic for loop to iterate through all the tag in tags-->
+            {% for tag in tags %}
+                <button class="tag" data-tag="{{ tag.name|lower }}">{{ tag.name }}</button> <!-- now for accessing a variable or to display a variable from python to html we use the double curly braces-->
+            {% endfor %}
+        </div>
+    </div>
+    <div class="projects-list">
+        {% for project in projects %}
+            <div class="project" data-name="{{ project.title|lower }}" data-tags="{{ project.tags.all|join:','|lower }}">
+                <h2><a href="{% url 'project' project.id %}">{{project.title}}</a></h2>
+                <p>{{project.description}}</p>
+                <p>Tags: {{project.tags.all|join:','}}</p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}
+
+{% block extra_js %}
+    <script src="{% static 'js/home.js' %}"></script>
+{% endblock extra_js%}
