@@ -3,7 +3,7 @@ Django based portfolio website inspired by tech with tim. The portfolio showcase
 
 ## Screenshots
 <img src="images/image1.png" alt="Home Page" width="800"/>
-<img src="images/image1.png" alt="Home Page" width="800"/>
+<img src="images/image2.png" alt="Home Page" width="800"/>
 
 ### Installation
 - Python 3.8+
