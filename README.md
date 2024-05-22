@@ -4,7 +4,8 @@ Django based portfolio website inspired by tech with tim. The portfolio showcase
 ## Screenshots
 <img src="images/image1.png" alt="Home Page" width="800"/>
 
-Home page that lists the projects with the heading, description and tags
+Home page that lists the projects with the heading, description and tags.
+ 
 <img src="images/image2.png" alt="Home Page" width="800"/>
 
 Project page that displays the images of the project, the full description and a link to the project git repository
